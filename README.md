@@ -14,7 +14,7 @@ InstaCache Sentinel acts as a bridge between your high-traffic website and the I
 ---
 
 ## 🏗️ System Logic
-1. Request hits `instapi.waterwick.info`.
+1. Request hits `api endpoint`.
 2. Script checks if `last_updated` is older than **3600 seconds** (1 hour).
 3. **If Old:** Script hits RapidAPI, updates MySQL, and returns fresh JSON.
 4. **If New:** Script returns data directly from MySQL (0 API cost).
@@ -47,8 +47,8 @@ The endpoint returns a clean JSON object for easy consumption:
 
 ```
 {
-  "followers": 3,
-  "username": "waterwick.info",
+  "followers": 300,
+  "username": "instagram_user",
   "last_updated": "2026-02-14 16:39:04",
   "cached": true
 }
